@@ -1,0 +1,193 @@
+:root{
+    --background:rgb(173, 226, 226);
+    --second-color:rgb(42, 85, 85);
+    --number-color:rgb(113, 199, 180);
+    --color-hover:rgb(5, 133, 101);
+    --text-color:rgb(72, 87, 87);
+    --text-background:rgb(236, 243, 242);
+    --hover-color:rgb(172, 240, 240);
+    --radius:20px;
+    --padding:25px;
+}
+
+body{
+    background-color: var(--background);
+    /* display: grid; */
+}
+
+.header{
+    position: relative; 
+    display:block;
+}
+
+ .header .logo{
+     /* position: absolute;  */
+    transform: translate(600px,100px);
+    align-items: center;
+    justify-self: center;
+    float: center;
+} 
+
+.container{
+    background-color: white;
+    border-radius: var(--radius);
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 35px;
+    padding: var(--padding);
+    position: absolute;
+    transform: translate(350px,150px);
+    box-shadow: 15px 25px 20px rgba(76, 76, 80, 0.089);
+}
+
+.container .right{
+    background-color: var(--second-color);
+    padding: var(--padding);
+    border-radius: var(--padding);
+    display: grid;
+    grid-template-columns: auto;
+    gap: 30px;
+}
+
+.container .right .person{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 50px;
+}
+
+
+.container .right .person .number{
+    font-size: 30px;
+    line-height: 3px;
+    color: var(--number-color);
+    font-weight:bold;
+}
+
+.container .right .person .text{
+    line-height: 3px;
+}
+
+.container .right .person .small-title{
+    color: white;
+    font-size: 13px;
+}
+
+.container .right .person .p{
+    color: var(--color-hover);
+    font-size: 10px;
+}
+.container .right button{
+    justify-items: center;
+    width: 100%;
+    height: 35px;
+    background-color: rgb(82, 141, 141);
+    color: var(--second-color);
+    font-weight: bold;
+    border-radius: 5px;
+    border: 0px;
+    bottom: 20px;
+}
+
+.container .right button:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+
+.container .left .bill pre,.container .left .select pre , .container .left .people pre{
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.container .left .bill input, .container .left .people input{
+    background-color: var(--text-background);
+    border:solid 2px white;
+    width: 100%;
+    height: 30px;
+    border-radius: 4px;
+    text-align: right;
+}
+
+.container .left .people #input2:hover, .container .left .bill #input1:hover{
+    border-color: var(--number-color);
+ }
+
+.container .left img{
+    z-index: 1;
+    position: absolute;
+    padding-left: 10px;
+    margin-top: -24px;
+    height: 15px;
+}
+
+.container .select .gridbox{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: start;
+    gap: 10px;
+}
+
+.container .select .gridbox .box{
+    width: 80px;
+    height: 35px;
+    background-color: var(--second-color);
+    color: white;
+    font-weight : bold;
+    border: 0px;
+    border-radius: 4px;
+}
+
+.container .select .gridbox .box:hover{
+     background-color: var(--hover-color) ;
+     cursor:pointer;
+}
+
+.container .left input:hover{
+    border-color: var(--hover-color);
+    cursor: pointer;
+}
+
+.container .left .people #input2:hover, .container .left .bill #input1:hover{
+   border:solid 2px var(--number-color);
+}
+ 
+.container .select .gridbox .text{
+    width: 76px;
+    height: 33px;
+    background-color: var(--text-background);
+    border: 0px;
+    border-radius: 4px;
+}
+btn
+
+#error-message{
+    color: red;
+}
+@media(max-width:676px){
+    .container{
+        /* position: absolute; */
+        width: 500%;
+        display: flex;
+        flex-wrap: wrap;
+        /* display: grid;
+        grid-template-columns: auto; */
+        width:fit-content;
+    }
+
+    .container .left, .container .right{
+      width: 100%;
+    }
+
+    .container .left .gridbox{
+        /* width: 100%; */
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content:center;
+    }
+    .container .left .gridbox .box{
+    }
+
+    /* .header .logo{
+        transform: translate(600px,100px);
+    } */
+}
